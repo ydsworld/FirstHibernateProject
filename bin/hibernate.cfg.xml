@@ -7,15 +7,18 @@
 <hibernate-configuration>
 
 <session-factory>
- <property name="hbm2ddl.auto">update</property>
+ <property name="hbm2ddl.auto">create</property>
 <property name="dialect">org.hibernate.dialect.Oracle9Dialect</property>
 <property name="connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
 <property name="connection.username">system</property>
 <property name="connection.password">system</property>
 <property name="show_sql">true</property>
 <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-     <mapping class="oneToMany.Employee"/>
-     <mapping class="oneToMany.Department"/>
+    
+   
+      <mapping class="oneToMany.UserDetails"/>
+     <mapping class="oneToMany.Vehicle"/>
+     
 </session-factory>
 
 </hibernate-configuration>
